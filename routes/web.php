@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/formatter', 'FormatController@index')->name('home');
+Route::get('/html-formatter', 'FormatController@html')->name('home');
+Route::get('/css-formatter', 'FormatController@index')->name('home');
+Route::get('/php-formatter', 'FormatController@index')->name('home');

@@ -24,6 +24,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
   <!-- Custom fonts for this template-->
   
@@ -104,6 +105,21 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
+  <script src="js/config.js"></script>
+  <!-- <script src="https://unpkg.com/prettier@1.13.0/standalone.js"></script> -->
+  <?php
+  foreach(explode(',',$scripts) as $script){
+  ?>
+  <script src="<?=$script;?>"></script>
+  <?php
+  }
+  ?>
+    <script src="js/main.js"></script>
+<script>
+  
+</script>
 
 </body>
 
