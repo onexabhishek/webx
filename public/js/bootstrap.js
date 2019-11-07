@@ -11,6 +11,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    // require('@babel/parser/lib/index.js');
     // window.x = require('ace-code-editor/lib/ace');
     // import ace from "ace-code-editor";
 } catch (e) {}

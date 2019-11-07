@@ -112,7 +112,7 @@
   <?php
   foreach(explode(',',$scripts) as $script){
   ?>
-  <script src="<?=$script;?>"></script>
+  <script src="<?=asset($script);?>"></script>
   <?php
   }
   ?>

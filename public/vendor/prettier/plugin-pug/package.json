@@ -1,0 +1,79 @@
+{
+  "_from": "@prettier/plugin-pug",
+  "_id": "@prettier/plugin-pug@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha512-05luwc79Bk399HNt4k5gZgsL6nA+80OOFX0Z5liGx/W0ifN00Mzs27qWbgerD/Yr2EkE2tOsnXEOdS8XocUrgg==",
+  "_location": "/@prettier/plugin-pug",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@prettier/plugin-pug",
+    "name": "@prettier/plugin-pug",
+    "escapedName": "@prettier%2fplugin-pug",
+    "scope": "@prettier",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@prettier/plugin-pug/-/plugin-pug-1.0.6.tgz",
+  "_shasum": "bd56f0bae19e701201820aa85c1c8f2bda31840d",
+  "_spec": "@prettier/plugin-pug",
+  "_where": "D:\\xampx\\htdocs\\webx",
+  "author": {
+    "name": "Christopher Quadflieg",
+    "email": "chrissi92@hotmail.de",
+    "url": "https://github.com/Shinigami92"
+  },
+  "bugs": {
+    "url": "https://github.com/prettier/plugin-pug/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "prettier": "~1.18.2",
+    "pug-lexer": "~4.1.0"
+  },
+  "deprecated": false,
+  "description": "Prettier Pug Plugin",
+  "devDependencies": {
+    "@types/jest": "~24.0.21",
+    "@types/node": "~12.12.5",
+    "@types/prettier": "~1.18.3",
+    "@typescript-eslint/eslint-plugin": "~2.6.1",
+    "@typescript-eslint/parser": "~2.6.1",
+    "eslint": "~6.6.0",
+    "eslint-config-prettier": "~6.5.0",
+    "eslint-plugin-prettier": "~3.1.1",
+    "jest": "~24.9.0",
+    "ts-jest": "~24.1.0",
+    "typescript": "~3.6.4"
+  },
+  "homepage": "https://github.com/prettier/plugin-pug#readme",
+  "keywords": [
+    "pug",
+    "prettier",
+    "prettier-plugin"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "@prettier/plugin-pug",
+  "peerDependencies": {
+    "prettier": "^1.18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prettier/plugin-pug.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "yarn lint:src && yarn lint:test",
+    "lint:src": "eslint --ext .ts src",
+    "lint:test": "eslint --ext .test.ts test",
+    "test": "jest"
+  },
+  "version": "1.0.6"
+}
