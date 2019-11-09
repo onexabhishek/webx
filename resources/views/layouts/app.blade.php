@@ -25,6 +25,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{asset('vendor/jquery-confirm/dist/jquery-confirm.min.css')}}" rel="stylesheet">
 
   <!-- Custom fonts for this template-->
   
@@ -91,23 +92,26 @@
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="<?=asset('vendor/jquery-confirm/dist/jquery-confirm.min.js');?>"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
+  
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <!-- <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script> -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
   <script src="js/config.js"></script>
+  <script src="<?=asset('vendor/popper.js/dist/popper.min.js');?>"></script>
+  <script src="<?=asset('vendor/tippy.js/dist/tippy.all.js');?>"></script>
   <!-- <script src="https://unpkg.com/prettier@1.13.0/standalone.js"></script> -->
   <?php
   foreach(explode(',',$scripts) as $script){
@@ -116,7 +120,7 @@
   <?php
   }
   ?>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 <script>
   
 </script>

@@ -1,3 +1,4 @@
+$.noConflict();
 //Select Element Where editor has to set
 var editor = ace.edit("editor");
 var editorRes = ace.edit("editorResult");
@@ -5,9 +6,18 @@ var editorRes = ace.edit("editorResult");
     editor.setTheme("ace/theme/chrome");
     editorRes.setTheme("ace/theme/chrome");
 //Select Editor Mode
-    
+// $.alert({
+//     title: 'Alert!',
+//     content: 'Simple alert!',
+// });
 
-class Formatter{
+class Adp{
+	modal_alert(config){
+		$.confirm(config);
+	}
+}   
+
+class Formatter extends Adp{
 	init(){
 		let data = this.getSettings()
 		editor.getSession().setMode("ace/mode/"+data.lang);
@@ -44,6 +54,9 @@ class Formatter{
 	}
 	format(input=false){
 		$('.box-progress').show();
+		$('html, body').animate({
+	        scrollTop: $("#resultBox").offset().top
+	    }, 1000);
 		let configData = this.submit();
 		if(configData.lang == 'json'){
 			var load = JSON.stringify(JSON.parse(input || configData.input),null,configData.indend)
@@ -59,9 +72,6 @@ class Formatter{
 		}
 		editorRes.setValue(load);
 		this.saveSettings(this.submit());
-		$('html, body').animate({
-	        scrollTop: $("#resultBox").offset().top
-	    }, 1000);
 		// console.log(load);
 		$('.box-progress').hide();
 	}
@@ -83,6 +93,34 @@ class Formatter{
 	}
 	getSettings(){
 		return JSON.parse(localStorage.getItem('formatter_config'));
+	}
+	copy(){
+		  var textArea = document.createElement("textarea");
+		  textArea.value = editorRes.getValue();
+		  textArea.style.position="fixed";  //avoid scrolling to bottom
+		  document.body.appendChild(textArea);
+		  textArea.focus();
+		  textArea.select();
+
+		  try {
+		    var successful = document.execCommand('copy');
+		    var msg = successful ? 'successful' : 'unsuccessful';
+		  // //   if(ref){
+		  // //   	tippy(ref, {
+				// // 	trigger: 'click',
+				// // 	arrow: true,
+			 // //  		content: '<strong>Copied</strong>',
+				// // });
+				// PopOver.show();
+				// PopOver.setProps({
+				//   arrow: true,
+				//   animation: 'scale',
+				// });
+		  //   // }
+		    console.log('Copying text command was ' + msg);
+		  } catch (err) {
+		    console.log('Oops, unable to copy');
+		  }
 	}
 	
 }
@@ -120,3 +158,73 @@ $('.urlModal').on('submit',(e)=>{
 	
 
 })
+$('.copy').click(function(){
+	formatter.copy();
+})
+$('.download').click(function(){
+	if(editorRes.getValue() == ''){
+	formatter.modal_alert({
+		icon: 'fas fa-exclamation-triangle',
+        title: 'Encountered an error!',
+        content: 'Nothing to Download Result is Empty',
+        type: 'red',
+        typeAnimated: true,
+        buttons: {
+            tryAgain: {
+                text: 'Ok',
+                action: function(){
+                }
+            }
+        }
+    });
+    return;
+	}
+	var form = document.createElement("form");
+	form.action = siteUrl('adp/datatofile');
+	form.method = 'POST';
+	let inputdata = document.createElement("textarea");
+	inputdata.type='text';
+	inputdata.name='data';
+	inputdata.value=editorRes.getValue();
+	let inputToken = document.createElement("input");
+	inputToken.type='text';
+	inputToken.name='_token';
+	inputToken.value=$('meta[name=csrf-token]')[0].content;
+	let inputLang = document.createElement("input");
+	inputLang.type='text';
+	inputLang.name='lang';
+	inputLang.value=formatter.getSettings().lang;
+
+	form.appendChild(inputdata);
+	form.appendChild(inputToken);
+	form.appendChild(inputLang);
+	form.style.display='none';
+	document.body.appendChild(form);
+	$(form).submit()  
+	$(form).remove()  
+})
+window.onerror = function (msg, url, lineNo, columnNo, error) {
+	// console.log(msg);
+	// console.log(error);
+  $.dialog({
+		icon: 'fas fa-exclamation-triangle',
+        title: 'Syntax error !',
+        content: 'Error:'+msg,
+        type: 'red',
+        typeAnimated: true,
+        buttons: {
+            tryAgain: {
+                text: 'Ok',
+                action: function(){
+                }
+            }
+        }
+    })
+
+  return false;
+}
+tippy('.copy', {
+	trigger: 'click',
+	arrow: true,
+ 	content: '<strong>Copied</strong>',
+});

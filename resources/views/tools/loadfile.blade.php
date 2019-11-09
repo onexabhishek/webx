@@ -55,18 +55,47 @@
                 // window.top.formatter.init();
                 let body =JSON.parse(data);
                 let config = window.parent.formatter.getSettings();
+                  window.parent.close(".close");
+                  window.parent.close(".close");
                 if(body.lang != config.lang){
-                  window.parent.alert('Invalid '+config.lang);
+                  window.parent.formatter.modal_alert({
+                    title: 'Encountered an error!',
+                    content: 'Invalid '+config.lang+' File',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Try again',
+                            btnClass: 'btn-red',
+                            action: function(){
+                            }
+                        }
+                    }
+                });
+                  // window.parent.alert('Invalid '+config.lang);
                 }else{
                   window.parent.formatter.format(body.data);
                 }
                 
-                window.parent.close(".close");
-                window.parent.close(".close");
+               
             },
             error: function(data){
-                console.log("error");
-                console.log(data);
+                window.parent.close(".close");
+                window.parent.close(".close");
+                window.parent.formatter.modal_alert({
+                    title: 'Encountered an error!',
+                    content: data.responseJSON.message,
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Try again',
+                            btnClass: 'btn-red',
+                            action: function(){
+                            }
+                        }
+                    }
+                });
             }
         });
   // $('#urlModal').modal('hide');

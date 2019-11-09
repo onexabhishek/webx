@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@prettier/plugin-pug": "^1.0.6",
-        "ace-code-editor": "^1.2.3"
+        "ace-code-editor": "^1.2.3",
+        "tippy.js": "^5.1.1"
     }
 }

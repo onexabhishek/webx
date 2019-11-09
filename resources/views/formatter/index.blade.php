@@ -92,8 +92,8 @@
                       </div>
                       <div class="form-group">
                         <label>Action</label>
-                        <select class="form-control" id="action">
-                          <option value="formate">Format</option>
+                        <select class="form-control" id="action" disabled="disabled">
+                          <option value="formate" selected>Format</option>
                           <option value="minify">Minify</option>
                         </select>
                       </div>
@@ -147,8 +147,15 @@
 
               <!-- Project Card Example -->
               <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Result</h6>
+                <div class="card-header" style="padding: 0.5rem 1.25rem;">
+                  <h6 class="m-0 font-weight-bold text-primary" style="line-height: 2">Result
+                    <div class="btn-group float-right btn-group-sm" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-secondary btn-success copy"><i class="fas fa-copy"></i> Copy</button>
+                      <button type="button" class="btn btn-secondary btn-success download"><i class="fas fa-download"></i> Download</button>
+                      <!-- <button type="button" class="btn btn-secondary btn-success">Right</button> -->
+                    </div>
+                  </h6>
+
                 </div>
                 <div class="card-body">
                   <div class="box">
@@ -165,7 +172,7 @@
             <div class="col-lg-3 mb-4">
 
               <!-- Illustrations -->
-              <div class="card shadow mb-4">
+              <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
                 </div>
@@ -176,10 +183,10 @@
                   <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
                   <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Approach -->
-              <div class="card shadow mb-4">
+              <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                 </div>
@@ -190,7 +197,7 @@
               </div>
 
             </div>
-          </div>
+          </div> -->
 
           <!-- Modal Section -->
          
