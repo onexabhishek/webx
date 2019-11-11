@@ -33,7 +33,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" {{$appx}}>
   @include('inc.navbar')
   <!-- Page Wrapper -->
   <div id="wrapper">

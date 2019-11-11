@@ -59,6 +59,7 @@
                   window.parent.close(".close");
                 if(body.lang != config.lang){
                   window.parent.formatter.modal_alert({
+                    icon: 'fas fa-exclamation-triangle',
                     title: 'Encountered an error!',
                     content: 'Invalid '+config.lang+' File',
                     type: 'red',
@@ -83,6 +84,7 @@
                 window.parent.close(".close");
                 window.parent.close(".close");
                 window.parent.formatter.modal_alert({
+                    icon: 'fas fa-exclamation-triangle',
                     title: 'Encountered an error!',
                     content: data.responseJSON.message,
                     type: 'red',

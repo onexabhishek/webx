@@ -35,7 +35,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top"  class="sidebar-toggled">
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
@@ -110,11 +110,12 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
   <script src="js/config.js"></script>
+  <script src="js/adp.js"></script>
   <script src="<?=asset('vendor/popper.js/dist/popper.min.js');?>"></script>
   <script src="<?=asset('vendor/tippy.js/dist/tippy.all.js');?>"></script>
   <!-- <script src="https://unpkg.com/prettier@1.13.0/standalone.js"></script> -->
   <?php
-  foreach(explode(',',$scripts) as $script){
+  foreach($scripts as $script){
   ?>
   <script src="<?=asset($script);?>"></script>
   <?php
