@@ -1,0 +1,27 @@
+<link rel='stylesheet' id='wp-block-library-css'  href='<?php echo SITE_URL;?>css/style.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='<?php echo SITE_URL;?>css/styles.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-core-sc-css'  href='<?php echo SITE_URL;?>css/shortcodes.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='resmap-css'  href='<?php echo SITE_URL;?>css/resmap.min.css?ver=4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='<?php echo SITE_URL;?>css/settings.css?ver=5.4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='resmap-css'  href='<?php echo SITE_URL;?>css/gallery.css' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'  href='<?php echo SITE_URL;?>wp-content/plugins/woocommerce/assets/<?php echo SITE_URL;?>css/prettyPhoto8571.css?ver=3.0.7' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-selectBox-css'  href='<?php echo SITE_URL;?>css/jquery.selectBox.css?ver=1.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-main-css'  href='<?php echo SITE_URL;?>css/style.css?ver=2.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-font-awesome-css'  href='<?php echo SITE_URL;?>css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='<?php echo SITE_URL;?>css/js_composer.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe_events-widget-this-week-pro-style-css'  href='<?php echo SITE_URL;?>css/widget-this-week-full.min.css?ver=4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-fonts-css'  href='https://fonts.googleapis.com/css?family=Rosario%3A400%2C400italic%2C500%2C600%2C700%2C800%7COverlock%3A400%2C400italic%2C500%2C600%2C700%2C800%7CPT+Serif%3A400%2C400italic%2C500%2C600%2C700%2C800&amp;subset' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='<?php echo SITE_URL;?>css/font-awesome.mins.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='stroke-gap-icons-css'  href='<?php echo SITE_URL;?>css/stroke-gap-icons-style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-style-css'  href='<?php echo SITE_URL;?>css/stylek.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyPhoto-css'  href='<?php echo SITE_URL;?>css/prettyPhoto.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='loader-css'  href='<?php echo SITE_URL;?>css/loaders.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-woo-style-css'  href='<?php echo SITE_URL;?>css/woocommerce.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-skin-css'  href='<?php echo SITE_URL;?>css/styley.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-responsive-css'  href='<?php echo SITE_URL;?>css/responsive.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-animations-css'  href='<?php echo SITE_URL;?>css/animations.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-tribe-events-css'  href='<?php echo SITE_URL;?>css/custom.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='kriya-tribe-events-css'  href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' type='text/css' media='all' />

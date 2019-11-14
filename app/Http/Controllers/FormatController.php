@@ -11,16 +11,18 @@ class FormatController extends Controller
     	return view('formatter.index');
     }
     public function format($lang){
+        $data['scripts'] = ['vendor/prettier/standalone.js'];
+        $data['ext_scripts'] = [];
         if($lang == 'xml' || $lang == 'javascript'){
-            $data['scripts'] = 'vendor/prettier/standalone.js,vendor/prettier/parser-flow.js,js/formatter.js';
+            array_push($data['scripts'],'vendor/prettier/parser-flow.js','js/formatter.js');
         }elseif($lang == 'json'){
-            $data['scripts'] = 'vendor/prettier/standalone.js,js/formatter.js';
+            array_push($data['scripts'],'js/formatter.js');
         }elseif($lang == 'css'){
-            $data['scripts'] = 'vendor/prettier/standalone.js,vendor/prettier/parser-postcss.js,js/formatter.js';
+            array_push($data['scripts'],'vendor/prettier/parser-postcss.js','js/formatter.js');
         }elseif($lang == 'php'){
-            $data['scripts'] = 'vendor/prettier/standalone.js,vendor/prettier/parser-postcss.js,vendor/prettier/plugin-php/standalone.js,js/formatter.js';
+            array_push($data['scripts'],'vendor/prettier/plugin-php/standalone.js','js/formatter.js');
         }else{
-            $data['scripts'] = 'vendor/prettier/standalone.js,vendor/prettier/parser-'.$lang.'.js,js/formatter.js';
+            array_push($data['scripts'],'vendor/prettier/parser-'.$lang.'.js','js/formatter.js');
             // $data['scripts'] = 'https://unpkg.com/prettier@1.18.2/standalone.js,https://unpkg.com/prettier@1.18.2/parser-'.$lang.'.js';
         }
         $data['lang'] = $lang;

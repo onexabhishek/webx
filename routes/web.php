@@ -32,4 +32,10 @@ Route::get('/adp/urltofile', 'FormatController@urltofile');
 Route::post('/adp/datatofile', 'FormatController@datatofile');
 
 Route::post('/adp/fileopen', 'FormatController@fileopen');
+
+Route::post('/converter/fileopen', 'ConversionController@fileopen');
+Route::get('/converter/loadfile', 'ConversionController@loadfile');
+
 Route::get('/loadfile', 'FormatController@loadfile');
+
+

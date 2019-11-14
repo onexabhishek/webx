@@ -117,7 +117,14 @@
   <?php
   foreach($scripts as $script){
   ?>
-  <script src="<?=asset($script);?>"></script>
+  <script src="<?=asset($script);?>" defer></script>
+  <?php
+  }
+  ?>
+  <?php
+  foreach($ext_scripts as $script){
+  ?>
+  <script src="<?=$script;?>" defer></script>
   <?php
   }
   ?>

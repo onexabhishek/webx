@@ -45,7 +45,7 @@
                   <div class="card option mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                      <input type="hidden" id="init_lang" value="{{isset($lang) ? $lang : ''}}">
+                      <input type="hidden" id="init_lang" value="{{(isset($from) && isset($to)) ? $from.','.$to : ''}}">
                       <h6 class="m-0 font-weight-bold text-primary">Options</h6>
                       <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,8 +78,10 @@
                             <label>Converter</label>
                             <select class="form-control" id="converter">
                               <option value="pug,html">Pug to HTML</option>
+                              <option value="jade,html">Jade to HTML</option>
                               <option value="yaml,javascript">YAML to Javascript</option>
-                              <option value="sass,css">Sass to Css</option>
+                              <option value="sass,css">SASS to CSS</option>
+                              <option value="scss,css">SCSS to CSS</option>
                               <option value="image,pdf">Image to PDF</option>
                               <option value="image,word">Image to Word</option>
                               <option value="image,text">Image to Text</option>
@@ -188,7 +190,7 @@
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                   <!-- cvnjdfkgh -->
-                  <iframe src="{{asset('loadfile')}}" id="loadFileFrame"></iframe>
+                  <iframe src="{{asset('converter/loadfile')}}" id="loadFileFrame"></iframe>
               </div>
             </div>
           </div>
