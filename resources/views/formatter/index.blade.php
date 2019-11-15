@@ -94,7 +94,6 @@
                         <label>Action</label>
                         <select class="form-control" id="action" disabled="disabled">
                           <option value="formate" selected>Format</option>
-                          <option value="minify">Minify</option>
                         </select>
                       </div>
                        <div class="form-group">

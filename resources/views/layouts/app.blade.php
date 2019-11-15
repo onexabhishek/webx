@@ -27,6 +27,10 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{asset('vendor/jquery-confirm/dist/jquery-confirm.min.css')}}" rel="stylesheet">
 
+    @foreach($styles as $style)
+    
+    <link href="{{asset($style)}}" rel="stylesheet">
+    @endforeach
   <!-- Custom fonts for this template-->
   
 
@@ -117,7 +121,7 @@
   <?php
   foreach($scripts as $script){
   ?>
-  <script src="<?=asset($script);?>" defer></script>
+  <script src="<?=asset($script);?>"></script>
   <?php
   }
   ?>

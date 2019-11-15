@@ -85,7 +85,7 @@
             error: function(data){
                 window.parent.close(".close");
                 window.parent.close(".close");
-                window.parent.formatter.modal_alert({
+                window.parent.converter.modal_alert({
                     icon: 'fas fa-exclamation-triangle',
                     title: 'Encountered an error!',
                     content: data.responseJSON.message,

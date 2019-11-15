@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Adptool V1.0</div>
       </a>
 
       <!-- Divider -->
@@ -19,7 +19,7 @@
       </li> -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
+          <i class="fas fa-align-justify"></i>
           <span>Formatter</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -41,7 +41,22 @@
 
       <!-- Divider -->
       <!-- <hr class="sidebar-divider"> -->
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#converters" aria-expanded="true" aria-controls="converters">
+          <i class="fas fa-exchange-alt"></i>
+          <span>Converter</span>
+        </a>
+        <div id="converters" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">All Converters:</h6>
+            <a class="collapse-item" href="<?=asset('pug-to-html');?>">PUG to HTML</a>
+            <a class="collapse-item" href="<?=asset('sass-to-css');?>">SASS to CSS</a>
+            <a class="collapse-item" href="<?=asset('scss-to-css');?>">SCSS to CSS</a>
+            <a class="collapse-item" href="<?=asset('yaml-to-javascript');?>">YAML to Javascript</a>
+            <a class="collapse-item" href="<?=asset('jade-to-html');?>">JADE to PUG</a>
+            <a class="collapse-item" href="<?=asset('javascript-to-coffeescript');?>">Javascript to Coffeescript</a>
+        </div>
+      </li>
       <!-- Heading -->
       <div class="sidebar-heading">
         Other Tools
@@ -58,8 +73,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">External Utilities:</h6>
-            <a class="collapse-item" href="https://www.adminspress.com/tools/press">Online Editor</a>
-            <a class="collapse-item" href="https://www.adminspress.com">Code Gallery</a>
+            <a class="collapse-item" href="https://www.adminspress.com/tools/press">Online Editor &nbsp;<i class="fas fa-external-link-alt float-right"></i></a>
+            <a class="collapse-item" href="https://www.adminspress.com">Code Gallery &nbsp;<i class="fas fa-external-link-alt float-right"></i></a>
             <!-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
             <a class="collapse-item" href="utilities-other.html">Other</a> -->
           </div>

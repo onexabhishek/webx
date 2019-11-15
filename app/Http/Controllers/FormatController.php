@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 class FormatController extends Controller
 {
     public function index(){
-
-    	return view('formatter.index');
+        $data['styles'] = [];
+        $data['scripts'] = [];
+        $data['ext_scripts'] = [];
+    	return view('formatter.home')->with($data);
     }
     public function format($lang){
+        $data['styles'] = [];
         $data['scripts'] = ['vendor/prettier/standalone.js'];
         $data['ext_scripts'] = [];
         if($lang == 'xml' || $lang == 'javascript'){
@@ -27,26 +30,6 @@ class FormatController extends Controller
         }
         $data['lang'] = $lang;
         
-        return view('formatter.index')->with($data);
-    }
-    public function html(){
-    	$data['scripts'] = 'https://unpkg.com/prettier@1.18.2/standalone.js,https://unpkg.com/prettier@1.18.2/parser-html.js';
-    	return view('formatter.index')->with($data);
-    }
-    public function css(){
-        $data['scripts'] = 'https://unpkg.com/prettier@1.18.2/standalone.js,https://unpkg.com/prettier@1.18.2/parser-postcss.js';
-        return view('formatter.index')->with($data);
-    }
-    public function yaml(){
-        $data['scripts'] = 'https://unpkg.com/@babel/standalone/babel.min.js,https://unpkg.com/prettier@1.18.2/standalone.js,https://unpkg.com/prettier@1.18.2/parser-yaml.js';
-        return view('formatter.index')->with($data);
-    }
-    public function typescript(){
-        $data['scripts'] = 'https://unpkg.com/prettier@1.18.2/standalone.js,https://unpkg.com/prettier@1.18.2/parser-typescript.js';
-        return view('formatter.index')->with($data);
-    }
-     public function javascript(){
-        $data['scripts'] = 'https://unpkg.com/prettier@1.18.2/standalone.js,https://unpkg.com/prettier@1.18.2/parser-typescript.js';
         return view('formatter.index')->with($data);
     }
     public function urltofile(){

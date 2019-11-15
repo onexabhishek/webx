@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 
 class ConversionController extends Controller{
 	public function convert($from,$to){
+		$data['styles']= [];
 		$data['scripts']= [];
 		$data['ext_scripts'] = [];
 		$data['from'] = $from;
@@ -14,11 +15,17 @@ class ConversionController extends Controller{
 			array_push($data['ext_scripts'],'https://pugjs.org/js/pug.js');
 		}elseif($from == 'yaml' && $to == $to){
 			array_push($data['scripts'],'vendor/esprima/dist/esprima.js','vendor/js-yaml/dist/js-yaml.min.js');
-		}elseif($from == 'sass' || 'scss' && $to == $to){
+		}elseif($from == 'sass' && $to == $to){
 			array_push($data['scripts'],'sass.min.js');
-		}elseif($from == 'image' || 'jpg' && $to == $to){
-			array_push($data['scripts'],'vendor/tesseract.js/dist/tesseract.min.js');
-			return view('converter.ocr')->with($data);
+		}elseif($from == 'scss' && $to == $to){
+			array_push($data['scripts'],'sass.min.js');
+		}elseif($from == 'javascript' && $to == 'coffeescript'){
+			array_push($data['ext_scripts'],'https://cdn.rawgit.com/js2coffee/js2coffee/v2.1.0/dist/js2coffee.js');
+		}
+		elseif($from == 'image' && $to == $to){
+			array_push($data['scripts'],'vendor/datatables/jquery.dataTables.min.js','vendor/datatables/dataTables.bootstrap4.min.js','js/demo/datatables-demo.js','vendor/tesseract.js/dist/tesseract.min.js');
+			array_push($data['styles'],'vendor/datatables/dataTables.bootstrap4.min.css');
+			return view('converter.image')->with($data);
 		}
 		array_push($data['scripts'],'js/converter.js');
 

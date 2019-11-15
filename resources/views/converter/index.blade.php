@@ -2,7 +2,7 @@
 @section('content')
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">{{isset($from) ? ucfirst($from) : ''}}-{{isset($to) ? ucfirst($to) : ''}} Converter</h1>
+            <h1 class="h3 mb-0 text-gray-800">{{isset($from) ? ucfirst($from) : ''}}-to-{{isset($to) ? ucfirst($to) : ''}} Converter</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
@@ -82,17 +82,17 @@
                               <option value="yaml,javascript">YAML to Javascript</option>
                               <option value="sass,css">SASS to CSS</option>
                               <option value="scss,css">SCSS to CSS</option>
-                              <option value="image,pdf">Image to PDF</option>
+                              <option value="javascript,coffeescript">Javascript to Coffeescript</option>
+                              <!-- <option value="image,pdf">Image to PDF</option>
                               <option value="image,word">Image to Word</option>
                               <option value="image,text">Image to Text</option>
-                              <option value="url,pdf">Webpage to PDF</option>
+                              <option value="url,pdf">Webpage to PDF</option> -->
                             </select>
                           </div>
                           <div class="form-group">
                             <label>Action</label>
                             <select class="form-control" id="action" disabled="disabled">
                               <option value="convert" selected>Convert</option>
-                              <option value="minify">Minify</option>
                             </select>
                           </div>
                            <div class="form-group">
